@@ -19,5 +19,3 @@ $(document).on("ready page:change", function() {
   $('accept_tos').tooltip();
 });
 
-$settlement = $('#settlement')
-console.log $settlement.data("crime")
