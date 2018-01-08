@@ -1,7 +1,7 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
-  config.serve_static_assets = true
+  config.RAILS_SERVE_STATIC_FILES = true
   config.assets.compile = true
 
   # Code is not reloaded between requests.
