@@ -48,8 +48,8 @@ gov_catigory = ->
   updateLabelWithPlus( 'lore' , lore )
   updateLabelWithPlus( 'society' , society )
   updateLabelWithPlus( 'dynamic_danger_label' , danger)
-  $("label[for='dynamic_base_value_label']").text(numberWithCommas(baseValue))
-  $("label[for='dynamic_purchase_limit_label']").text(numberWithCommas(purchaseLimit))
+  $("label[for='dynamic_base_value_label']").text(numberWithCommas(baseValue.toFixed(2)))
+  $("label[for='dynamic_purchase_limit_label']").text(numberWithCommas(purchaseLimit.toFixed(2)))
   $("label[for='dynamic_minor_items_label']").text(minorItems)
   $("label[for='dynamic_medium_items_label']").text(mediumItems)
   $("label[for='dynamic_major_items_label']").text(majorItems)
@@ -64,6 +64,7 @@ gov_catigory = ->
 
 numberWithCommas = (x) =>
   return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+
 
 ordinal_suffix_of = (i) ->
     j = i % 10
