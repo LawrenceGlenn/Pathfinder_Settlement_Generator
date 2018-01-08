@@ -37,26 +37,50 @@ gov_catigory = ->
 @updateSettlement = (element) ->
   updateValues()
   $("label[for='dynamic_name_label']").text($('#name_input').val())
-  $("label[for='dynamic_population_label']").text($('#population_input').val())
+  $("label[for='dynamic_population_label']").text(numberWithCommas($('#population_input').val()))
   $("label[for='dynamic_alignment_label']").text($('#alignment_input').val())
   $("label[for='dynamic_government_label']").text($('#government_input').val())
   $("label[for='dynamic_city_catigory_label']").text(gov_catigory())
-  $("label[for='corruption']").text(corruption)
-  $("label[for='crime']").text(crime)
-  $("label[for='economy']").text(economy)
-  $("label[for='law']").text(law)
-  $("label[for='lore']").text(lore)
-  $("label[for='society']").text(society)
-  $("label[for='dynamic_danger_label']").text(danger)
-  $("label[for='dynamic_base_value_label']").text(baseValue)
-  $("label[for='dynamic_purchase_limit_label']").text(purchaseLimit)
+  updateLabelWithPlus( 'corruption' , corruption )
+  updateLabelWithPlus( 'crime' , crime )
+  updateLabelWithPlus( 'economy' , economy )
+  updateLabelWithPlus( 'law' , law )
+  updateLabelWithPlus( 'lore' , lore )
+  updateLabelWithPlus( 'society' , society )
+  updateLabelWithPlus( 'dynamic_danger_label' , danger)
+  $("label[for='dynamic_base_value_label']").text(numberWithCommas(baseValue))
+  $("label[for='dynamic_purchase_limit_label']").text(numberWithCommas(purchaseLimit))
   $("label[for='dynamic_minor_items_label']").text(minorItems)
   $("label[for='dynamic_medium_items_label']").text(mediumItems)
   $("label[for='dynamic_major_items_label']").text(majorItems)
   if spellcasting <= 0
-    $("label[for='dynamic_spellcasting_label']").text("0")
+    $("label[for='dynamic_spellcasting_label']").text("0th")
   else
-    $("label[for='dynamic_spellcasting_label']").text(spellcasting)
+    $("label[for='dynamic_spellcasting_label']").text(ordinal_suffix_of(spellcasting))
+  if $('#population_details_input').val()
+    $("label[for='dynamic_population_details_label']").text("(" + $('#population_details_input').val() + ")")
+  else
+    $("label[for='dynamic_population_details_label']").text("")
+
+numberWithCommas = (x) =>
+  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+
+ordinal_suffix_of = (i) ->
+    j = i % 10
+    k = i % 100
+    if (j == 1 && k != 11)
+        return i + "st"
+    if (j == 2 && k != 12)
+        return i + "nd"
+    if (j == 3 && k != 13)
+        return i + "rd"
+    return i + "th"
+
+updateLabelWithPlus = (text, val) ->
+  if val >= 0
+    $("label[for= #{text} ]").text("+#{val}")
+  else
+    $("label[for= #{text} ]").text(val)
 
 updateValues = ->
   magicItemCatigory = getCityCatigory()
@@ -258,6 +282,23 @@ updateValuesFromDisadvantages = ->
     $("#disadvantages_container").show()
   else
     $("#disadvantages_container").hide()
+  updateDisadvantagesNames()
+
+updateDisadvantagesNames = ->
+  if $('.disadvantages_checkbox:checked').length > 0
+    name = $('.disadvantages_checkbox:checked').first().attr("name").replace(/_/g, " ")
+    $('.disadvantages_checkbox:checked').slice(1).each (index, box) =>
+      name = name + ", " + $(box).attr("name").replace(/_/g, " ")
+    $("label[for='dynamic_disadvantage_label']").text(name)
+
+updateQualitiesNames = ->
+  if $('.qualities:checked').length > 0
+    name = $('.qualities:checked').first().attr("name").replace(/_/g, " ")
+    $('.qualities:checked').slice(1).each (index, box) =>
+      name = name + ", " + $(box).attr("name").replace(/_/g, " ")
+    $("label[for='dynamic_qualities_label']").text(name)
+  else
+    $("label[for='dynamic_qualities_label']").text("")
 
 updateValuesFromQualities = ->
   if $('#Academic').is(':checked')
@@ -346,3 +387,4 @@ updateValuesFromQualities = ->
     baseValue = baseValue * 1.2
   if $('#Wealth_Disparity').is(':checked')
     corruption = corruption + 2
+  updateQualitiesNames()

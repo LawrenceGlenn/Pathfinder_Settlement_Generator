@@ -1,8 +1,5 @@
 <div>
-  <%= label_tag "name_label", "Settlement Name" %>
-  <%= text_field_tag 'name_input', 'Example Name', onkeyup:"updateSettlement(this)", autocomplete: :off %>
-  <%= label_tag "population_label", "Population:" %>
-  <%= number_field_tag 'population_input', 0, onchange:"updateSettlement(this)", autocomplete: :off %>
+ 
   <table>
     <tr>
       <th>Settlement Type</th>
@@ -51,6 +48,14 @@
     </tr>
   </table>
 
+  <%= label_tag "name_label", "Settlement Name" %>
+  <%= text_field_tag 'name_input', 'Example Name', onkeyup:"updateSettlement(this)", autocomplete: :off %>
+  <%= label_tag "population_label", "Population:" %>
+  <%= number_field_tag 'population_input', 0, onchange:"updateSettlement(this)", autocomplete: :off %><br/>
+  <%= label_tag "population_details_label", "Population Details (Optional):" %>
+  <%= text_area_tag 'population_details_input', "", onkeyup:"updateSettlement(this)", autocomplete: :off, placeholder: "e.g. 100 halflings or 80% elven" %><br/>
+
+
   <%= label_tag "alignment_label", "Alignment: " %>
   <%= select_tag 'alignment_input', options_for_select([
     ["Lawful Good", "LG"],
@@ -73,37 +78,44 @@
     ["Secret Syndicate"],
     ],selected: "Autocracy"), onchange: "updateSettlement(this)", autocomplete: :off %>
 
-  <div>
+
+  <div class="qualities_container">
+  <br/>
     <%= label_tag 'QUALITIES', nil, class: 'qualities',  title: get_qualities_title, 'data-toggle' => 'tooltip', 'data-placement' => 'right' %>
     <br/>
     <% get_qualities_checkboxes().each do |name, tooltip| %>
-      <%= check_box_tag name.to_s, name.to_s, false, class: 'qualities', onchange: "updateSettlement(this)", autocomplete: :off, title: tooltip.to_s, 'data-toggle' => 'tooltip', 'data-placement' => 'right' %>
-      <%= label_tag name.to_s, nil, class: 'qualities',  title: tooltip.to_s, 'data-toggle' => 'tooltip', 'data-placement' => 'right' %>
+      <div class="checkbox_container">
+        <%= check_box_tag name.to_s, name.to_s, false, class: 'qualities', onchange: "updateSettlement(this)", autocomplete: :off, title: tooltip.to_s, 'data-toggle' => 'tooltip', 'data-placement' => 'right' %>
+        <%= label_tag name.to_s, nil, class: 'qualities',  title: tooltip.to_s, 'data-toggle' => 'tooltip', 'data-placement' => 'right' %>
+      </div>
     <% end %>
   </div>
 
-  <div>
+  <br/>
+
+  <div class="disadvantages_container">
       <%= label_tag "DISADVANTAGES", nil, class: 'disadvantages',  title: get_disadvantages_title, 'data-toggle' => 'tooltip', 'data-placement' => 'right' %>
     <br/>
     <% get_disadvantages_checkboxes().each do |name, tooltip| %>
-      <%= check_box_tag name.to_s, name.to_s, false, class: 'disadvantages_checkbox', onchange: "updateSettlement(this)", autocomplete: :off,  title: tooltip.to_s, 'data-toggle' => 'tooltip', 'data-placement' => 'right' %>
-      <%= label_tag name.to_s, nil, class: 'disadvantages',  title: tooltip.to_s, 'data-toggle' => 'tooltip', 'data-placement' => 'right' %>
-      <% if name.to_s == "Cursed" %>
-        <%= select_tag 'cursed_select', options_for_select([
-          ["Corruption"],
-          ["Crime"],
-          ["Economy"],
-          ["Law"],
-          ["Lore"],
-          ["Society"]
-          ]), onchange: "updateSettlement(this)", autocomplete: :off ,  title: tooltip.to_s, 'data-toggle' => 'tooltip', 'data-placement' => 'right' %>
-      <% end %>
+      <div class="checkbox_container">
+        <%= check_box_tag name.to_s, name.to_s, false, class: 'disadvantages_checkbox', onchange: "updateSettlement(this)", autocomplete: :off,  title: tooltip.to_s, 'data-toggle' => 'tooltip', 'data-placement' => 'right' %>
+        <%= label_tag name.to_s, nil, class: 'disadvantages',  title: tooltip.to_s, 'data-toggle' => 'tooltip', 'data-placement' => 'right' %>
+        <% if name.to_s == "Cursed" %>
+          <%= select_tag 'cursed_select', options_for_select([
+            ["Corruption"],
+            ["Crime"],
+            ["Economy"],
+            ["Law"],
+            ["Lore"],
+            ["Society"]
+            ]), onchange: "updateSettlement(this)", autocomplete: :off ,  title: tooltip.to_s, 'data-toggle' => 'tooltip', 'data-placement' => 'right' %>
+        <% end %>
+      </div>
     <% end %>
   </div>
 
-
 </div>
 
-<div>
+<div class= "border">
   <%= render partial: 'settlement'%>
 </div>

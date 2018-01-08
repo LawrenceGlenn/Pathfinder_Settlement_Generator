@@ -1,46 +1,52 @@
-<%= label_tag "dynamic_name_label", "Example Name" %> <br/>
+<%= label_tag "dynamic_name_label", "Example Name", class: "Settlement_Name" %> <br/><br/>
+
+<div class="output_container">
 <%= label_tag "dynamic_alignment_label", "N" %>
 <%= label_tag "dynamic_city_catigory_label", "thorpe" %> <br/>
 
 <p>
-  Corruption <%= label_tag "corruption", "-4" %>; Crime <%= label_tag "crime", "-4" %>; Economy <%= label_tag "economy", "-4" %>; Law <%= label_tag "law", "-4" %>; Lore <%= label_tag "lore", "-4" %>; Society <%= label_tag "society", "-4" %>
+  <%= label_tag "corruption_label", "Corruption", class: "stat_label" %> <%= label_tag "corruption", "-4" %>; 
+  <%= label_tag "crime_label", "Crime", class: "stat_label" %> <%= label_tag "crime", "-4" %>; 
+  <%= label_tag "economy_label", "Economy", class: "stat_label" %> <%= label_tag "economy", "-4" %>; 
+  <%= label_tag "law_label", "Law", class: "stat_label" %> <%= label_tag "law", "-4" %>; 
+  <%= label_tag "lore_label", "Lore", class: "stat_label" %> <%= label_tag "lore", "-4" %>; 
+  <%= label_tag "society_label", "Society", class: "stat_label" %> <%= label_tag "society", "-4" %>
 </p>
 
-<p>Danger
-  <%= label_tag "dynamic_danger_label", "-10" %>
-  <div id="disadvantages_container" style="display:none">
-    Disadvantages
+<%= label_tag "qualities", "Qualities", id: "qualities_label", class: "stat_label" %> <%= label_tag "dynamic_qualities_label", "", id: "qualities_label" %>
+
+<p>
+  <%= label_tag "danger", "Danger", id: "danger_label", class: "stat_label" %> <%= label_tag "dynamic_danger_label", "-10", id: "danger_label" %>
+  <div id="disadvantages_container">
+     ; <%= label_tag "disadvantages_label", "Disadvantages", class: "stat_label" %>
+  <%= label_tag "dynamic_disadvantage_label", ""%>
   </div>
 </p>
-
+<br/>
 <p>Demographics</p>
 
-<p>Government
-  <%= label_tag "dynamic_government_label", "Autocracy" %>
+<p>
+  <%= label_tag "government", "Government ", class: "stat_label" %><%= label_tag "dynamic_government_label", "Autocracy" %>
 </p>
 
 <p>
-  Population
-  <%= label_tag "dynamic_population_label", "0" %>
+  <%= label_tag "population", "Population ", class: "stat_label" %><%= label_tag "dynamic_population_label", "0" %>
+  <%= label_tag "dynamic_population_details_label", "" %>
+
 </p>
 
 
 <p>Marketplace</p>
 
 <p>
-  Base Value 
-  <%= label_tag "dynamic_base_value_label", "50" %>
-   gp; Purchase Limit 
-  <%= label_tag "dynamic_purchase_limit_label", "500" %>
-   gp; Spellcasting
-  <%= label_tag "dynamic_spellcasting_label", "1" %>
+  <%= label_tag "baseValue", "Base Value ", class: "stat_label" %><%= label_tag "dynamic_base_value_label", "50" %> gp; 
+  <%= label_tag "puchaseLimit", "Purchase Limit ", class: "stat_label" %><%= label_tag "dynamic_purchase_limit_label", "500" %> gp; 
+  <%= label_tag "spellcasting", "Spellcasting ", class: "stat_label" %><%= label_tag "dynamic_spellcasting_label", "1st" %>
 </p>
 
 <p>
-  Minor Items 
-  <%= label_tag "dynamic_minor_items_label", "1d4" %>
-  ; Medium Items
-  <%= label_tag "dynamic_medium_items_label", "-" %>
-  ; Major Items
-  <%= label_tag "dynamic_major_items_label", "-" %>
+  <%= label_tag "minorItems", "Minor Items ", class: "stat_label" %> <%= label_tag "dynamic_minor_items_label", "1d4" %>; 
+  <%= label_tag "mediumItems", "Medium Items ", class: "stat_label" %> <%= label_tag "dynamic_medium_items_label", "-" %>; 
+  <%= label_tag "majorItems", "Major Items ", class: "stat_label" %> <%= label_tag "dynamic_major_items_label", "-" %>
 </p>
+</div>

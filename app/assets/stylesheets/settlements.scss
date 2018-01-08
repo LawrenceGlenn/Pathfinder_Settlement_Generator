@@ -1,3 +1,75 @@
 // Place all the styles related to the settlements controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+Body{
+  background-image: url(Papyrus.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.Settlement_Name{
+  background-color: lightblue;
+  font-weight: bold;
+  width: 99.6%;
+  display: inline-block;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 6px;
+}
+
+.border{
+  border-style: ridge;
+}
+.output_container{
+  padding-left: 6px;
+}
+.stat_label, label[for="QUALITIES"], label[for="DISADVANTAGES"] {
+  font-weight:bold;
+}
+label[for="QUALITIES"], label[for="DISADVANTAGES"] {
+  width: 100%;
+  border-bottom: 1px solid black;
+}
+table {
+  text-align: center;
+  border-collapse: collapse;
+  float: right;
+  height: 100%;
+}
+th {
+  border-bottom: 1px solid black;
+}
+th, td{
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+}
+th:first-child, td:first-child {
+  border-left: none;
+}
+th:last-child, td:last-child {
+  border-right: none;
+}
+#danger_label {
+  float: left;
+  padding-right: 8px;
+}
+#disadvantages_container {
+  display: none;
+  float: left;
+}
+#population_details_input{
+  resize: none;
+  height: 44px;
+  width: 300px;
+}
+label[for="population_details_label"]{
+  vertical-align: top;
+}
+label[for="dynamic_population_details_label"]{
+}
+.checkbox_container{
+  float: left;
+}
+.qualities_container, .disadvantages_container{
+  overflow: auto;
+}
