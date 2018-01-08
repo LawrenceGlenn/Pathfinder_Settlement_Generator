@@ -2,10 +2,12 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
 Body{
-  background-image: url(Papyrus.jpg);
+  background-image: url(hi-res-papyrus.jpg);
   background-repeat: no-repeat;
   background-size: 100%;
+  font-size: 15px;
 }
 .Settlement_Name{
   background-color: lightblue;
@@ -30,24 +32,29 @@ label[for="QUALITIES"], label[for="DISADVANTAGES"] {
   width: 100%;
   border-bottom: 1px solid black;
 }
-table {
+div.demographics_input_container{
+  display: inline-block;
+  vertical-align: top;
+}
+table.size_key {
   text-align: center;
   border-collapse: collapse;
-  float: right;
+  display: inline-block;
   height: 100%;
-}
-th {
-  border-bottom: 1px solid black;
-}
-th, td{
-  border-right: 1px solid black;
-  border-left: 1px solid black;
-}
-th:first-child, td:first-child {
-  border-left: none;
-}
-th:last-child, td:last-child {
-  border-right: none;
+
+  th {
+    border-bottom: 1px solid black;
+  }
+  th, td{
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+  }
+  th:first-child, td:first-child {
+    border-left: none;
+  }
+  th:last-child, td:last-child {
+    border-right: none;
+  }
 }
 #danger_label {
   float: left;
@@ -72,4 +79,12 @@ label[for="dynamic_population_details_label"]{
 }
 .qualities_container, .disadvantages_container{
   overflow: auto;
+}
+.tooltip{
+  border-radius: 15px;
+  padding: 5px;
+  max-width: 400px;
+  font-weight: normal;
+  font-size: 12px;
+  background-color: burlywood;
 }

@@ -377,7 +377,7 @@ updateValuesFromQualities = ->
     law = law - 2
     society = society + 2
     crime = crime - 4
-    spellcasting = spellcasting + 2
+    spellcasting = spellcasting - 2
   if $('#Supportive').is(':checked')
     society = society + 2
   if $('#Timid_Citizens').is(':checked')

@@ -13,9 +13,14 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require bootstrap-sprockets
 //= require_tree .
 
-$(document).on("ready page:change", function() {
-  $('accept_tos').tooltip();
+$(document).ready(function() {
+  $('[data-toggle="tooltip"]').tooltip({
+    trigger: 'hover',
+    container: 'body',
+    placement: 'right',
+    'delay': { show: 200}
+  });
 });
-
