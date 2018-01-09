@@ -1,10 +1,10 @@
 <div>
-  <h1>SETTLEMENT GENERATOR</h1>
+  <h1>Settlement Generator</h1>
   <div class="demographics_input_container">
 
-    <%= label_tag "name_label", "Settlement Name" %>
+    <%= label_tag "name_label", "Settlement Name : " %>
     <%= text_field_tag 'name_input', 'Example Name', onkeyup:"updateSettlement(this)", autocomplete: :off %>
-    <%= label_tag "population_label", "Population:" %>
+    <%= label_tag "population_label", "Population :" %>
     <%= number_field_tag 'population_input', 0, onchange:"updateSettlement(this)", autocomplete: :off %><br/>
     <%= label_tag "population_details_label", "Population Details (Optional):" %>
     <%= text_area_tag 'population_details_input', "", onkeyup:"updateSettlement(this)", autocomplete: :off, placeholder: "e.g. 100 halflings or 80% elven" %><br/>
@@ -37,7 +37,7 @@
 
   <div class="qualities_container">
     <br/>
-    <%= label_tag 'QUALITIES', nil, class: 'qualities',  title: get_qualities_title, 'data-toggle' => 'tooltip' %>
+    <%= label_tag 'QUALITIES', nil, class: 'qualities_label',  title: get_qualities_title, 'data-toggle' => 'tooltip' %>
     <br/>
     <table>
       <% get_qualities_checkboxes().each_with_index do |(name, tooltip), index| %>
@@ -134,6 +134,8 @@
 
 </div>
 
+
+<div class= "border-effect"></div>
 <div class= "border">
   <%= render partial: 'settlement'%>
 </div>
