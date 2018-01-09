@@ -3,6 +3,13 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
+@font-face {
+  font-family: 'Great Vibes';
+  src: font-url("/assets/GreatVibes-Regular") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 Body{
   background-image: url(hi-res-papyrus.jpg);
   background-repeat: no-repeat;
@@ -26,13 +33,13 @@ label.qualities, label.disadvantages{
   font-size: 24px;
   cursor: pointer;
   color: black;
-  padding: 2px 0px 0 28px;
+  padding: 1px 0px 0 28px;
   margin-left: 30px;
 }
 label.qualities:before, label.qualities:after, label.disadvantages:before, label.disadvantages:after{
   font-size: 24px;
   /*absolutely positioned*/
-  position: absolute; bottom: 5; left: -10px; right: 0px;
+  position: absolute; top: 1; left: -10px;
 }
 label.qualities:before, label.disadvantages:before {
   content: '[]'; /*checkbox unchecked */
@@ -42,9 +49,9 @@ label.qualities:after, label.disadvantages:after {
   max-width: 0;
   overflow: hidden;
   opacity: 0.5;
-  font-size: 30px;
+  font-size: 40px;
   font-style: italic;
-  bottom: 0px;
+  bottom: -6px;
   left: -6px;
   color: black;
  
@@ -66,7 +73,7 @@ input[type="text"], input[type="number"],textarea, select, select{
   border-bottom-color: black;
   border-radius: 0 0 15px 0;
   box-shadow: none;
-  font: 400 24px/1.4 'Great Vibes', Helvetica, sans-serif;
+  font-family: 'Great Vibes', Helvetica, sans-serif;
 }
 
 input[type="number"]{
