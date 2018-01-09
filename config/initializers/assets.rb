@@ -3,6 +3,9 @@
 # Version of your assets, change this if you want to expire all your assets.
 Rails.application.config.assets.version = '1.0'
 
+  config.assets.enabled = true
+  config.assets.paths << Rails.root.join('app', 'assets', 'fonts')
+  config.assets.precompile << /\.(?:svg|eot|woff|ttf|otf)$/
 # Add additional assets to the asset load path
 # Rails.application.config.assets.paths << Emoji.images_path
 
