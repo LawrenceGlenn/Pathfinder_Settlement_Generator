@@ -15,55 +15,48 @@ Body{
 .Settlement_Name{
   font-weight: bold;
   font-size: 36px;
-//  background-color: lightblue;
-//  width: 99.6%;
-//  display: inline-block;
-//  padding-top: 2px;
-//  padding-bottom: 2px;
-//  padding-left: 6px;
 }
 
 input[type="checkbox"]{
   display: none;
 }
 label.qualities, label.disadvantages{
-    position: relative;
-    padding-left: 30px;
-    font-size: 24px;
-    cursor: pointer;
-    color: black;
-    padding: 2px 0px 0 28px;
-    margin-left: 30px;
+  position: relative;
+  padding-left: 30px;
+  font-size: 24px;
+  cursor: pointer;
+  color: black;
+  padding: 2px 0px 0 28px;
+  margin-left: 30px;
 }
 label.qualities:before, label.qualities:after, label.disadvantages:before, label.disadvantages:after{
-
-    font-size: 24px;
-    /*absolutely positioned*/
-    position: absolute; bottom: 5; left: -10px; right: 0px;
+  font-size: 24px;
+  /*absolutely positioned*/
+  position: absolute; bottom: 5; left: -10px; right: 0px;
 }
 label.qualities:before, label.disadvantages:before {
-    content: '[]'; /*checkbox unchecked */
+  content: '[]'; /*checkbox unchecked */
 }
 label.qualities:after, label.disadvantages:after {
-    content: '√'; /*checkbox checked*/
-    max-width: 0;
-    overflow: hidden;
-    opacity: 0.5;
-    font-size: 30px;
-    font-style: italic;
-   bottom: 0px;
-   left: -6px;
-   color: black;
+  content: '√'; /*checkbox checked*/
+  max-width: 0;
+  overflow: hidden;
+  opacity: 0.5;
+  font-size: 30px;
+  font-style: italic;
+  bottom: 0px;
+  left: -6px;
+  color: black;
  
--webkit-transition: all 0.50s;
-    -moz-transition: all 0.50s;
-    -o-transition: all 0.50s;
-     transition: all 0.50s;
+  -webkit-transition: all 0.50s;
+  -moz-transition: all 0.50s;
+  -o-transition: all 0.50s;
+  transition: all 0.50s;
 }
 input[type="checkbox"]:checked + label:after {
-    max-width: 25px;
-    opacity: 1;
-    margin-right: 40px;
+  max-width: 25px;
+  opacity: 1;
+  margin-right: 40px;
 }
 
 input[type="text"], input[type="number"],textarea, select, select{
@@ -120,6 +113,8 @@ table.size_key {
 
   th {
     border-bottom: 1px solid black;
+    padding-left: 4px;
+    padding-right: 4px;
   }
   th, td{
     border-right: 1px solid black;
@@ -153,9 +148,6 @@ label[for="dynamic_population_details_label"]{
 }
 .checkbox_container{
   float: left;
-}
-.qualities_container, .disadvantages_container{
-  overflow: auto;
 }
 .tooltip{
   position: absolute;

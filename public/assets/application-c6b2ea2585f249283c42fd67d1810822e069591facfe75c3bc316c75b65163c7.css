@@ -1,0 +1,218 @@
+@charset "UTF-8";
+/* line 6, /home/lawrence/My Programs/Settlement_Generator/app/assets/stylesheets/settlements.scss */
+Body {
+  background-image: url(hi-res-papyrus.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-repeat: repeat-y;
+  font: 400 24px/1.4 'Great Vibes', Helvetica, sans-serif;
+  color: #2b2b2b;
+  text-shadow: 4px 4px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* line 15, /home/lawrence/My Programs/Settlement_Generator/app/assets/stylesheets/settlements.scss */
+.Settlement_Name {
+  font-weight: bold;
+  font-size: 36px;
+}
+
+/* line 20, /home/lawrence/My Programs/Settlement_Generator/app/assets/stylesheets/settlements.scss */
+input[type="checkbox"] {
+  display: none;
+}
+
+/* line 23, /home/lawrence/My Programs/Settlement_Generator/app/assets/stylesheets/settlements.scss */
+label.qualities, label.disadvantages {
+  position: relative;
+  padding-left: 30px;
+  font-size: 24px;
+  cursor: pointer;
+  color: black;
+  padding: 2px 0px 0 28px;
+  margin-left: 30px;
+}
+
+/* line 32, /home/lawrence/My Programs/Settlement_Generator/app/assets/stylesheets/settlements.scss */
+label.qualities:before, label.qualities:after, label.disadvantages:before, label.disadvantages:after {
+  font-size: 24px;
+  /*absolutely positioned*/
+  position: absolute;
+  bottom: 5;
+  left: -10px;
+  right: 0px;
+}
+
+/* line 37, /home/lawrence/My Programs/Settlement_Generator/app/assets/stylesheets/settlements.scss */
+label.qualities:before, label.disadvantages:before {
+  content: '[]';
+  /*checkbox unchecked */
+}
+
+/* line 40, /home/lawrence/My Programs/Settlement_Generator/app/assets/stylesheets/settlements.scss */
+label.qualities:after, label.disadvantages:after {
+  content: '√';
+  /*checkbox checked*/
+  max-width: 0;
+  overflow: hidden;
+  opacity: 0.5;
+  font-size: 30px;
+  font-style: italic;
+  bottom: 0px;
+  left: -6px;
+  color: black;
+  -webkit-transition: all 0.50s;
+  -moz-transition: all 0.50s;
+  -o-transition: all 0.50s;
+  transition: all 0.50s;
+}
+
+/* line 56, /home/lawrence/My Programs/Settlement_Generator/app/assets/stylesheets/settlements.scss */
+input[type="checkbox"]:checked + label:after {
+  max-width: 25px;
+  opacity: 1;
+  margin-right: 40px;
+}
+
+/* line 62, /home/lawrence/My Programs/Settlement_Generator/app/assets/stylesheets/settlements.scss */
+input[type="text"], input[type="number"], textarea, select, select {
+  background: transparent;
+  border-width: 0 0 2px 0;
+  border-bottom-style: solid;
+  border-bottom-color: black;
+  border-radius: 0 0 15px 0;
+  box-shadow: none;
+  font: 400 24px/1.4 'Great Vibes', Helvetica, sans-serif;
+}
+
+/* line 72, /home/lawrence/My Programs/Settlement_Generator/app/assets/stylesheets/settlements.scss */
+input[type="number"] {
+  width: 120px;
+}
+
+/* line 76, /home/lawrence/My Programs/Settlement_Generator/app/assets/stylesheets/settlements.scss */
+.border {
+  margin-top: 0px;
+  padding-top: 20px;
+  padding-left: 40px;
+  border-width: 5px 0 0 0;
+  border-radius: 60px 0 0 0;
+  border-top-style: solid;
+  border-top-color: black;
+  width: 60%;
+  float: left;
+}
+
+/* line 87, /home/lawrence/My Programs/Settlement_Generator/app/assets/stylesheets/settlements.scss */
+.border-effect {
+  border-width: 0px 0px 5px 0px;
+  border-radius: 0 0 80px 0;
+  border-bottom-style: solid;
+  border-bottom-color: black;
+  width: 85%;
+  padding-bottom: 80px;
+  margin-left: 60px;
+  margin-bottom: -5px;
+  float: left;
+}
+
+/* line 98, /home/lawrence/My Programs/Settlement_Generator/app/assets/stylesheets/settlements.scss */
+.output_container {
+  padding-left: 6px;
+}
+
+/* line 101, /home/lawrence/My Programs/Settlement_Generator/app/assets/stylesheets/settlements.scss */
+.stat_label, label[for="QUALITIES"], label[for="DISADVANTAGES"] {
+  font-weight: bold;
+}
+
+/* line 104, /home/lawrence/My Programs/Settlement_Generator/app/assets/stylesheets/settlements.scss */
+div.demographics_input_container {
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* line 108, /home/lawrence/My Programs/Settlement_Generator/app/assets/stylesheets/settlements.scss */
+table.size_key {
+  text-align: center;
+  border-collapse: collapse;
+  display: inline-block;
+  height: 100%;
+}
+/* line 114, /home/lawrence/My Programs/Settlement_Generator/app/assets/stylesheets/settlements.scss */
+table.size_key th {
+  border-bottom: 1px solid black;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+/* line 119, /home/lawrence/My Programs/Settlement_Generator/app/assets/stylesheets/settlements.scss */
+table.size_key th, table.size_key td {
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+}
+/* line 123, /home/lawrence/My Programs/Settlement_Generator/app/assets/stylesheets/settlements.scss */
+table.size_key th:first-child, table.size_key td:first-child {
+  border-left: none;
+}
+/* line 126, /home/lawrence/My Programs/Settlement_Generator/app/assets/stylesheets/settlements.scss */
+table.size_key th:last-child, table.size_key td:last-child {
+  border-right: none;
+}
+
+/* line 130, /home/lawrence/My Programs/Settlement_Generator/app/assets/stylesheets/settlements.scss */
+#danger_label {
+  float: left;
+  padding-right: 8px;
+}
+
+/* line 134, /home/lawrence/My Programs/Settlement_Generator/app/assets/stylesheets/settlements.scss */
+#disadvantages_container {
+  display: none;
+  float: left;
+}
+
+/* line 138, /home/lawrence/My Programs/Settlement_Generator/app/assets/stylesheets/settlements.scss */
+#population_details_input {
+  resize: none;
+  font-size: 16px;
+  height: 50px;
+  width: 300px;
+}
+
+/* line 144, /home/lawrence/My Programs/Settlement_Generator/app/assets/stylesheets/settlements.scss */
+label[for="population_details_label"] {
+  vertical-align: top;
+}
+
+/* line 149, /home/lawrence/My Programs/Settlement_Generator/app/assets/stylesheets/settlements.scss */
+.checkbox_container {
+  float: left;
+}
+
+/* line 152, /home/lawrence/My Programs/Settlement_Generator/app/assets/stylesheets/settlements.scss */
+.tooltip {
+  position: absolute;
+  border-radius: 15px;
+  padding: 5px;
+  max-width: 400px;
+  max-height: 100px;
+  font-family: sans-serif;
+  font-weight: normal;
+  font-size: 12px;
+  background-color: #eedbc3;
+  opacity: .85;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */

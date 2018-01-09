@@ -12,15 +12,15 @@
 
     <%= label_tag "alignment_label", "Alignment: " %>
     <%= select_tag 'alignment_input', options_for_select([
-      ["Lawful Good", "LG"],
-      ["Neutral Good", "NG"],
-      ["Chaotic Good", "CG"],
-      ["Lawful Neutral", "LN"],
+      ["Lawful Good", "L G"],
+      ["Neutral Good", "N G"],
+      ["Chaotic Good", "C G"],
+      ["Lawful Neutral", "L N"],
       ["True Neutral", "N"],
-      ["Chaotic Neutral", "CN"],
-      ["Lawful Evil", "LE"],
-      ["Neutral Evil", "NE"],
-      ["Chaotic Evil", "CE"],
+      ["Chaotic Neutral", "C N"],
+      ["Lawful Evil", "L E"],
+      ["Neutral Evil", "N E"],
+      ["Chaotic Evil", "C E"],
       ], selected: "N"), onchange: "updateSettlement(this)", autocomplete: :off %>
 
     <%= label_tag "government_label", "Government: " %>
