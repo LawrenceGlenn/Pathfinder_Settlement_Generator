@@ -15,7 +15,8 @@ Body{
   background-repeat: no-repeat;
   background-size: 100%;
   background-repeat: repeat-y;
-  font: 400 24px/1.4 'Great Vibes', Helvetica, sans-serif;
+  font-family: 'Great Vibes', Helvetica, sans-serif;
+  font-size: 24px;
   color: #2b2b2b;
   text-shadow: 4px 4px 3px rgba(0,0,0,0.1); 
 }
@@ -74,6 +75,7 @@ input[type="text"], input[type="number"],textarea, select, select{
   border-radius: 0 0 15px 0;
   box-shadow: none;
   font-family: 'Great Vibes', Helvetica, sans-serif;
+  font-size: 24px;
 }
 
 input[type="number"]{
