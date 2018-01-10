@@ -13,5 +13,6 @@ module SettlementGenerator
     # -- all .rb files in that directory are automatically loaded.
     config.assets.paths << Rails.root.join("app", "assets", "fonts")
     config.assets.precompile += %w(.svg .eot .woff .tff .otf)
+    config.secret_key_base = '<%= ENV["SECRET_KEY_BASE"] %>'
   end
 end
