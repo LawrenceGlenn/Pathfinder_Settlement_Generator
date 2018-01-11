@@ -23,8 +23,3 @@ $(document).ready(function() {
     'delay': { show: 200}
   });
 });
-
-
-function textAreaAdjust(o) {
-  o.style.height = (25+o.style.height+o.scrollHeight)+"px";
-}
