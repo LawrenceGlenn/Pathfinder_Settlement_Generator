@@ -49,4 +49,7 @@
   <%= label_tag "mediumItems", "Medium Items ", class: "stat_label" %> <%= label_tag "dynamic_medium_items_label", "-" %>; 
   <%= label_tag "majorItems", "Major Items ", class: "stat_label" %> <%= label_tag "dynamic_major_items_label", "-" %>
 </p>
+
+  <%= label_tag "notes_label", "Notes :", class: "stat_label" %> <br/>
+  <%= text_area_tag 'notes_input', "", autocomplete: :off, onkeyup:"textAreaAdjust(this)" %><br/>
 </div>

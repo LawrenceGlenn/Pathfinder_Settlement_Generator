@@ -52,7 +52,7 @@ label.qualities:after, label.disadvantages:after {
   opacity: 0.5;
   font-size: 40px;
   font-style: italic;
-  bottom: -6px;
+  bottom: -3px;
   left: -6px;
   color: black;
  
@@ -76,6 +76,9 @@ input[type="text"], input[type="number"],textarea, select, select{
   box-shadow: none;
   font-family: 'Great Vibes', Helvetica, sans-serif;
   font-size: 24px;
+}
+select option{
+  background-color: #edd28f;
 }
 
 input[type="number"]{
@@ -169,4 +172,12 @@ label[for="dynamic_population_details_label"]{
   font-size: 12px;
   background-color: #eedbc3;
   opacity: .85;
+}
+#notes_input {
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  resize: none;
+  width: 100%;
+  overflow: hidden;
 }
