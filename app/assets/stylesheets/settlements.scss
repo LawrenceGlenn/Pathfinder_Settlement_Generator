@@ -161,20 +161,34 @@ label[for="dynamic_population_details_label"]{
 .checkbox_container{
   float: left;
 }
-.tooltip{
-  position: absolute;
-  border-radius: 15px;
-  padding: 5px;
-  max-width: 400px;
-  max-height: 100px;
-  font-family: sans-serif;
-  font-weight: normal;
-  font-size: 12px;
-  background-color: #eedbc3;
-  opacity: .85;
-}
 .divtext {
   width: 100%;
   min-height: 30px;
   overflow: auto;
+}
+.ui-tooltip-content{
+  font-family: sans-serif;
+  font-weight: normal;
+  font-size: 12px;
+}
+.ui-helper-hidden-accessible{
+  display:none;
+}
+div[role="tooltip"]{
+  background-color: #edd28f;
+  max-width: 400px;
+  border-style: hidden;
+  border-radius: 20px;
+}
+div.signature{
+  float: right;
+  width: 100%;
+}
+label[for="signature"]{
+  float: right;
+  font-size: 16px;
+}
+input#artifact_input{
+  width: 150px;
+  font-size: 16px;
 }

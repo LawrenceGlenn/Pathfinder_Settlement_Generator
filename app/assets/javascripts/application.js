@@ -12,14 +12,12 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery-ui/widgets/tooltip
 //= require turbolinks
 //= require_tree .
 
-$(document).ready(function() {
-  $('[data-toggle="tooltip"]').tooltip({
-    trigger: 'hover',
-    container: 'body',
-    placement: 'right',
-    'delay': { show: 200}
-  });
-});
+  $( function() {
+    $( document ).tooltip({
+      tack:true
+    });
+  } );
