@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby "2.4.0"
 
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
@@ -14,6 +15,7 @@ gem 'pg'
 gem 'puma', '~> 3.0'
 
 gem 'rails_12factor'
+
 
 #gem 'bootstrap-sass', '~> 3.3.7'
 #gem 'autoprefixer-rails'

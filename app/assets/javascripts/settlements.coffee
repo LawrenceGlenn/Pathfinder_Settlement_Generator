@@ -34,6 +34,13 @@ gov_catigory = ->
     when pop <= 25000 then "large city"
     else "metropolis"
 
+@printerFriendly = (element) ->
+  $('div.total_input_container').toggle()
+  if $(element).text() == "Printer Friendly"
+    $(element).text("Show Input")
+  else
+    $(element).text("Printer Friendly")
+
 @updateSettlement = (element) ->
   updateValues()
   $("label[for='dynamic_name_label']").text($('#name_input').val())
@@ -294,12 +301,20 @@ updateDisadvantagesNames = ->
 
 updateQualitiesNames = ->
   if $('.qualities:checked').length > 0
-    name = $('.qualities:checked').first().attr("name").replace(/_/g, " ")
+    name = $('.qualities:checked').first().attr("name").replace(/_/g, " ") + addExtraInputForCheckbox($('.qualities:checked').first())
     $('.qualities:checked').slice(1).each (index, box) =>
-      name = name + ", " + $(box).attr("name").replace(/_/g, " ")
+      name = name + ", " + $(box).attr("name").replace(/_/g, " ") + addExtraInputForCheckbox(box)
     $("label[for='dynamic_qualities_label']").text(name)
   else
     $("label[for='dynamic_qualities_label']").text("")
+
+addExtraInputForCheckbox = (box) ->
+  input_name = "input#" + $(box).attr("name") + "_input"
+  result = ""
+  if $(input_name).length && $(input_name).val().length > 0
+    result = " (" + $(input_name).val() + ")"
+  else
+    return result
 
 updateValuesFromQualities = ->
   if $('#Academic').is(':checked')
