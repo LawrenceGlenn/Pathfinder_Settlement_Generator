@@ -40,7 +40,6 @@ GEM
       tzinfo (~> 1.1)
     arel (7.1.4)
     bindex (0.5.0)
-    browser (2.0.3)
     builder (3.2.3)
     byebug (9.1.0)
     coffee-rails (4.2.2)
@@ -167,7 +166,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  browser (= 2.0.3)
   byebug
   coffee-rails (~> 4.2)
   jbuilder (~> 2.5)
