@@ -1,70 +1,125 @@
 // Place all the styles related to the settlements controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ *= require jquery-ui/tooltip
+ */
 
 
 @font-face {
-  font-family: 'Great Vibes';
-  src: font-url("GreatVibes-Regular.otf") format("opentype");
+  font-family: 'Carobtn';
+  src: font-url("CAROBTN.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
-Body{
-  background-image: url(hi-res-papyrus.jpg);
-  background-repeat: no-repeat;
-  background-size: 100%;
-  background-repeat: repeat-y;
-  font-family: 'Great Vibes', Helvetica, sans-serif;
-  font-size: 24px;
+body{
+  font-family: 'Carobtn', Helvetica, sans-serif;
+  font-size: 28px;
   color: #2b2b2b;
   text-shadow: 4px 4px 3px rgba(0,0,0,0.1); 
+}
+.background_class{
+  background-image: url(Seamless-hi-res-papyrus.png);
+  background-size: 100%;
+  background-repeat: repeat-y;
 }
 .Settlement_Name{
   font-weight: bold;
   font-size: 36px;
+}
+#name_input{
+  margin-bottom: 10px;
+}
+
+h1{
+  text-align: center;
+}
+h2{
+  text-align: center;
+  font-size: 16px;
+  margin-top: -30px;
+  margin-bottom: 50px;
+  border-bottom: 10px;
+  padding-bottom: 20px;
+  background-image: url(calligraphy_underscore.png);
+  background-size: 100% 35px;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+.margin_container{
+  margin-left: 8%;
+  margin-right: 8%;
+}
+
+label.qualities_label, label.disadvantages_label{
+  display: inline-block;
+  width: 100%;
+  background-image: url(calligraphy_underscore_fliped.png);
+  background-size: 100% 20px;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  padding-bottom: 10px;
+}
+label.disadvantages_label{
+  background-image: url(calligraphy_underscore.png);
+  background-size: 100% 30px;
 }
 
 input[type="checkbox"]{
   display: none;
 }
 label.qualities, label.disadvantages{
+  text-align: left;
   position: relative;
-  padding-left: 30px;
   font-size: 24px;
   cursor: pointer;
   color: black;
-  padding: 1px 0px 0 28px;
-  margin-left: 30px;
+  padding: 10px 0px 10px 28px;
+  margin-left: 20px;
 }
 label.qualities:before, label.qualities:after, label.disadvantages:before, label.disadvantages:after{
-  font-size: 24px;
   /*absolutely positioned*/
-  position: absolute; top: 1; left: -10px;
+  position: absolute; top: 10px; left: -10px;
 }
 label.qualities:before, label.disadvantages:before {
-  content: '[]'; /*checkbox unchecked */
+  content: '( )'; /*checkbox unchecked */
 }
 label.qualities:after, label.disadvantages:after {
   content: '√'; /*checkbox checked*/
-  max-width: 0;
-  overflow: hidden;
+  width: 0;
   opacity: 0.5;
-  font-size: 40px;
+  overflow: hidden;
+  font-size: 30px;
   font-style: italic;
-  bottom: -3px;
-  left: -6px;
+  bottom: 0px;
+  left: -12px;
+  top: 0px;
   color: black;
- 
-  -webkit-transition: all 0.50s;
-  -moz-transition: all 0.50s;
-  -o-transition: all 0.50s;
-  transition: all 0.50s;
+
+  -webkit-transition: all 1.00s;
+  -moz-transition: all 1.00s;
+  -o-transition: all 1.00s;
+  transition: all 1.00s;
 }
 input[type="checkbox"]:checked + label:after {
-  max-width: 25px;
+  width: 30px;
   opacity: 1;
-  margin-right: 40px;
+  margin-right: 50px;
 }
 
 input[type="text"], input[type="number"],textarea, select, select{
@@ -74,7 +129,7 @@ input[type="text"], input[type="number"],textarea, select, select{
   border-bottom-color: black;
   border-radius: 0 0 15px 0;
   box-shadow: none;
-  font-family: 'Great Vibes', Helvetica, sans-serif;
+  font-family: 'Carobtn', Helvetica, sans-serif;
   font-size: 24px;
 }
 select option{
@@ -93,7 +148,7 @@ input[type="number"]{
   border-radius: 60px 0 0 0;
   border-top-style: solid;
   border-top-color: black;
-  width: 60%;
+  width: 70%;
   float: left;
 }
 .border-effect{
@@ -117,6 +172,10 @@ input[type="number"]{
 div.demographics_input_container{
   display: inline-block;
   vertical-align: top;
+  text-align: center;
+}
+.total_input_container{
+  text-align: center;
 }
 table.size_key {
   text-align: center;
@@ -151,10 +210,14 @@ table.size_key {
 #population_details_input{
   resize: none;
   font-size: 16px;
-  height: 50px;
+  height: 25px;
   width: 300px;
 }
+#alignment_input, #government_input{
+  margin-top: 10px;
+}
 label[for="population_details_label"]{
+  padding-left: 30px;
   vertical-align: top;
 }
 label[for="dynamic_population_details_label"]{
@@ -200,8 +263,33 @@ input#artifact_input{
 button{
   background: transparent;
   font-size: 24px;
-  font-family: 'Great Vibes', Helvetica, sans-serif;
+  font-family: 'Carobtn', Helvetica, sans-serif;
+}
+  .printer_friendly{
   position: absolute;
   bottom: 0;
   right: 75px;
+  }
+  .remove_background{
+  position: absolute;
+  bottom: 0;
+  right: 210px;
+  display: none;
+  }
+.disadvantages_container, .name_pop_container{
+  padding: 10px 0px 20px 0px;
+  max-width: auto;
+}
+.box_background{
+  background-image: url(yellow-smear-translucent-boxy.png);
+  background-size: 100% 100%;
+}
+.qualities_container{
+  margin-top: 25px;
+  padding: 20px 50px 20px 50px;
+  background-image: url(yellow-smear-translucent-boxy.png);
+  background-size: 100% 100%;
+}
+.disadvantages_checkbox_container{
+  display: inline-block;
 }

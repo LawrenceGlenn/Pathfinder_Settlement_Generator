@@ -1,0 +1,109 @@
+
+<div class = "total_input_container">
+  <h1>Settlement Generator</h1>
+  <h2>An online program for quickly making pathfinder RPG settlements</h2>
+  <div class="demographics_input_container">
+
+    
+    <div class= "box_background">
+      <div class="name_pop_container">
+
+        <%= label_tag "name_label", "Settlement Name : " %>
+        <%= text_field_tag 'name_input', 'Settlement', onkeyup:"updateSettlement(this)", autocomplete: :off %><br/>
+        <%= label_tag "population_label", "Population :", title: get_pop_table, 'data-toggle' => 'tooltip' %>
+        <%= number_field_tag 'population_input', 0, onchange:"updateSettlement(this)", autocomplete: :off, title: get_pop_table, 'data-toggle' => 'tooltip' %>
+        <%= label_tag "population_details_label", "Population Details (Optional):", title: get_pop_table, 'data-toggle' => 'tooltip' %>
+        <%= text_area_tag 'population_details_input', "", onkeyup:"updateSettlement(this)", autocomplete: :off, placeholder: "e.g. 100 halflings or 80% elven", title: get_pop_table, 'data-toggle' => 'tooltip' %><br/>
+
+
+        <%= label_tag "alignment_label", "Alignment: " %>
+        <%= select_tag 'alignment_input', options_for_select([
+          ["Lawful Good", "L G"],
+          ["Neutral Good", "N G"],
+          ["Chaotic Good", "C G"],
+          ["Lawful Neutral", "L N"],
+          ["True Neutral", "N"],
+          ["Chaotic Neutral", "C N"],
+          ["Lawful Evil", "L E"],
+          ["Neutral Evil", "N E"],
+          ["Chaotic Evil", "C E"],
+          ], selected: "N"), onchange: "updateSettlement(this)", autocomplete: :off %>
+
+        <%= label_tag "government_label", "Government: " %>
+        <%= select_tag 'government_input', options_for_select([
+          ["Autocracy"],
+          ["Council"],
+          ["Magical"],
+          ["Overlord"],
+          ["Secret Syndicate"],
+          ],selected: "Autocracy"), onchange: "updateSettlement(this)", autocomplete: :off %>
+      
+      </div>
+    </div>
+
+    <div class="qualities_container">
+      <div class = "qualities_label_container">
+        <%= label_tag 'QUALITIES', nil, class: 'qualities_label',  title: get_qualities_title, 'data-toggle' => 'tooltip' %>
+      </div>
+      <br/>
+      <table>
+        <% get_qualities_checkboxes().each_slice(3) do |slice| %>
+          <tr>
+          <% slice.each do |name, quality| %>
+            <td>
+              <div class="checkbox_container">
+                <%= check_box_tag name.to_s, name.to_s, false, class: 'qualities', onchange: "updateSettlement(this)", autocomplete: :off, title: quality[:description].to_s, 'data-toggle' => 'tooltip' %>
+                <%= label_tag name.to_s, nil, class: 'qualities',  title: quality[:description].to_s, 'data-toggle' => 'tooltip' %>
+              </div>
+
+              <% if quality[:extra] %>
+                 : <%= text_field_tag name.to_s + "_input", '', class: 'qualities_extra_input', onkeyup:"updateSettlement(this)", autocomplete: :off %>
+              <% end %>
+            </td>
+          <% end %>
+          </tr>
+        <% end %>
+      </table>
+    </div>
+
+    <br/>
+  </div>
+  <div class= "box_background">
+    <div class="disadvantages_container">
+      <%= label_tag "DISADVANTAGES", nil, class: 'disadvantages_label',  title: get_disadvantages_title, 'data-toggle' => 'tooltip', 'data-placement' => 'right' %>
+      <br/>
+          <% get_disadvantages_checkboxes().each do |name, disadvantage| %>
+
+<div class="disadvantages_checkbox_container">
+            <%= check_box_tag name.to_s, name.to_s, false, class: 'disadvantages_checkbox', onchange: "updateSettlement(this)", autocomplete: :off,  title: disadvantage[:description].to_s, 'data-toggle' => 'tooltip', 'data-placement' => 'right' %>
+            <%= label_tag name.to_s, nil, class: 'disadvantages',  title: disadvantage[:description].to_s, 'data-toggle' => 'tooltip', 'data-placement' => 'right' %>
+            <% if name.to_s == "Cursed" %>
+              <%= select_tag 'cursed_select', options_for_select([
+                ["Corruption"],
+                ["Crime"],
+                ["Economy"],
+                ["Law"],
+                ["Lore"],
+                ["Society"]
+                ]), onchange: "updateSettlement(this)", autocomplete: :off ,  title: disadvantage[:description].to_s, 'data-toggle' => 'tooltip', 'data-placement' => 'right' %>
+            <% end %>
+</div>
+
+          <% end %>
+        </div>
+    </div>
+  </div>
+</div>
+
+
+<div class= "border-effect">
+  <%= button_tag "Toggle Background", class: "remove_background", onclick: "hideBackground(this)" %>
+  <%= button_tag "Printer Friendly", class: "printer_friendly", onclick: "printerFriendly(this)" %>
+</div>
+<div class= "border">
+  <%= render partial: '/settlements/settlement'%>
+</div>
+
+<div class="signature">
+  <%= label_tag "signature", "By Lawrence Glenn" %>
+</div>

@@ -164,4 +164,54 @@ module ApplicationHelper
     'Just as a settlement can have unusual qualities to enhance its statistics, it can also suffer from disadvantages. There’s no limit to the number of disadvantages a community can suffer, but most do not have disadvantages, since a settlement plagued by disadvantages for too long eventually collapses. A disadvantage can arise as the result of an event or action taken by a powerful or influential NPC or PC. Likewise, by going on a quest or accomplishing A noteworthy deed, a group of heroes can remove a settlement’s disadvantage.'
   end
 
+  def get_pop_table
+    '<table class="size_key">
+      <tr>
+        <th>Settlement Type</th>
+        <th>Population Range</th>
+        <th>Recomended Max Qualities</th>
+      </tr>
+      <tr>
+        <td>Thorpe</td>
+        <td>Fewer than 20</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>Hamlet</td>
+        <td>21-60</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>Village</td>
+        <td>61-200</td>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td>Small Town</td>
+        <td>201-2,000</td>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td>Large Town</td>
+        <td>2,001-5,000</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>Small City</td>
+        <td>5,001-10,000</td>
+        <td>4</td>
+      </tr>
+      <tr>
+        <td>Large City</td>
+        <td>10,001-25,000</td>
+        <td>5</td>
+      </tr>
+      <tr>
+        <td>Metropolis</td>
+        <td>More than 25,000</td>
+        <td>6</td>
+      </tr>
+    </table>'
+  end
+
 end

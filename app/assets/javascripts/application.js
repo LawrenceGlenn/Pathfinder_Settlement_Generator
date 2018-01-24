@@ -18,6 +18,9 @@
 
   $( function() {
     $( document ).tooltip({
-      tack:true
+      content: function () {
+        return this.getAttribute("title");
+    },
+    tack:true
     });
   } );

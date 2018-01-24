@@ -36,10 +36,15 @@ gov_catigory = ->
 
 @printerFriendly = (element) ->
   $('div.total_input_container').toggle()
+  $('body').addClass('background_class')
+  $('.remove_background').toggle()
   if $(element).text() == "Printer Friendly"
     $(element).text("Show Input")
   else
     $(element).text("Printer Friendly")
+
+@hideBackground = (element) ->
+  $('body').toggleClass('background_class')
 
 @updateSettlement = (element) ->
   updateValues()
