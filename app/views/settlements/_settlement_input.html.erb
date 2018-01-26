@@ -18,16 +18,16 @@
 
         <%= label_tag "alignment_label", "Alignment: " %>
         <%= select_tag 'alignment_input', options_for_select([
-          ["Lawful Good", "L G"],
-          ["Neutral Good", "N G"],
-          ["Chaotic Good", "C G"],
-          ["Lawful Neutral", "L N"],
-          ["True Neutral", "N"],
-          ["Chaotic Neutral", "C N"],
-          ["Lawful Evil", "L E"],
-          ["Neutral Evil", "N E"],
-          ["Chaotic Evil", "C E"],
-          ], selected: "N"), onchange: "updateSettlement(this)", autocomplete: :off %>
+          ["Lawful Good"],
+          ["Neutral Good"],
+          ["Chaotic Good"],
+          ["Lawful Neutral"],
+          ["True Neutral", "Neutral"],
+          ["Chaotic Neutral"],
+          ["Lawful Evil"],
+          ["Neutral Evil"],
+          ["Chaotic Evil"],
+          ], selected: "Neutral"), onchange: "updateSettlement(this)", autocomplete: :off %>
 
         <%= label_tag "government_label", "Government: " %>
         <%= select_tag 'government_input', options_for_select([
@@ -100,8 +100,12 @@
   <%= button_tag "Toggle Background", class: "remove_background", onclick: "hideBackground(this)" %>
   <%= button_tag "Printer Friendly", class: "printer_friendly", onclick: "printerFriendly(this)" %>
 </div>
+
+<div class="dot_container">
+  <div class = "dot_effect"></div>
 <div class= "border">
   <%= render partial: '/settlements/settlement'%>
+</div>
 </div>
 
 <div class="signature">

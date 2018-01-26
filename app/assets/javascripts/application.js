@@ -21,6 +21,7 @@
       content: function () {
         return this.getAttribute("title");
     },
-    tack:true
+    track:true,
+    hide: false
     });
   } );

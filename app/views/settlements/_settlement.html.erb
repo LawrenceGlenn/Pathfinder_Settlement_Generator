@@ -2,7 +2,7 @@
 <%= label_tag "dynamic_name_label", "Settlement", class: "Settlement_Name" %> <br/>
 
 <div class="output_container">
-<%= label_tag "dynamic_alignment_label", "Default Values (N" %>
+<%= label_tag "dynamic_alignment_label", "Default Values (Neutral" %>
 <%= label_tag "dynamic_city_catigory_label", "thorpe)" %> <br/>
 
 <p>
@@ -16,6 +16,7 @@
 
 <%= label_tag "qualities", "Qualities", id: "qualities_label", class: "stat_label" %> <%= label_tag "dynamic_qualities_label", "", id: "qualities_label" %>
 
+<div class = "demo_container">
 <p>
   <%= label_tag "danger", "Danger", id: "danger_label", class: "stat_label" %> <%= label_tag "dynamic_danger_label", "-10", id: "danger_label" %>
   <div id="disadvantages_container">
@@ -23,9 +24,10 @@
   <%= label_tag "dynamic_disadvantage_label", ""%>
   </div>
 </p>
-<br/>
-<p>Demographics</p>
-
+</div>
+<div class = "demo_container">
+  <p>Demographics</p>
+</div>
 <p>
   <%= label_tag "government", "Government ", class: "stat_label" %><%= label_tag "dynamic_government_label", "Autocracy" %>
 </p>

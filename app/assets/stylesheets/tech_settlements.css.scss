@@ -1,3 +1,274 @@
 // Place all the styles related to the tech_settlements controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body{
+  text-align: center;
+font-family: 'Futura';
+color: #51cbee;
+font-size: 20px;
+text-shadow: 0 0 1px #51cbee, 0 0 2px #51cbee, 0 0 4px #0900FF, 0 0 6px #0900FF, 0 0 8px #0900FF, 0 0 11px #0900FF, 0 0 15px #0900FF;
+}
+input, textarea, select{
+font-family: 'Futura';
+color: #51cbee;
+text-shadow: 0 0 1px #51cbee, 0 0 2px #51cbee, 0 0 4px #0900FF, 0 0 6px #0900FF, 0 0 8px #0900FF, 0 0 11px #0900FF, 0 0 15px #0900FF;
+}
+.background_class{
+  background: #050505;
+}
+
+.margin_container{
+  margin-left: 8%;
+  margin-right: 8%;
+}
+
+.name_pop_container{
+  font-weight: bold;
+}
+
+#population_details_input{
+  resize: none;
+  font-size: 16px;
+  height: 20px;
+  width: 300px;
+}
+
+table{
+  display: inline-block;
+}
+h2{
+  font-size: 14px;
+  margin-top: -26px;
+}
+h1, h2, .qualities_label, .disadvantages_label{
+font-family: 'Futura';
+color: #85DAF3;
+font-weight: bold;
+text-shadow: 0 0 5px #85DAF3, 0 0 10px #85DAF3, 0 0 20px #0900FF, 0 0 30px #0900FF, 0 0 40px #0900FF, 0 0 55px #0900FF, 0 0 75px #0900FF;
+}
+.qualities_label, .disadvantages_label{
+  font-size: 24px;
+}
+.ui-helper-hidden-accessible{
+  display:none;
+}
+
+input, textarea, select, button{
+  transition: all 0.30s ease-in-out;
+  outline: none;
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid #499eff;
+  border-radius: 6px;
+  background: transparent;
+}
+
+.divtext{
+  transition: all 0.30s ease-in-out;
+  outline: none;
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  background: transparent;
+  border: none;
+  text-align: left;
+  width: 95%;
+  min-height: 30px;
+  overflow: auto;
+}
+ 
+input:hover, textarea:hover, select:hover, button:hover, .divtext:hover {
+  box-shadow: 0px 0px 20px #0900FF;
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid #0900FF;
+}
+ 
+input:focus, textarea:focus, select:focus, button:focus, .divtext:focus {
+  box-shadow: 0px 0px 20px #85DAF3;
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid #85DAF3;
+}
+
+table{
+  text-align: left;
+}
+  .remove_background{
+  display: none;
+  }
+
+.checkbox_container{
+  float: left;
+}
+.ui-tooltip-content{
+  vertical-align: middle;
+  font-family: sans-serif;
+  font-weight: normal;
+  font-size: 12px;
+  border: 1px solid #499eff;
+  border-radius: 50%;
+  padding: 30px;
+  box-shadow: 0px 0px 20px #0900FF;
+  background-color: #101010;
+  -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 2s; /* Firefox < 16 */
+  -ms-animation: fadein 2s; /* Internet Explorer */
+  -o-animation: fadein 2s; /* Opera < 12.1 */
+  animation: fadein 2s;
+}
+div[role="tooltip"]{
+  vertical-align: middle;
+  max-width: 200px;
+  border: 2px solid #49eeff;
+  box-shadow: 0px 0px 20px #49eeff;
+  border-radius: 50%;
+  padding: 30px;
+  background-image: url(Test_Neon.png);
+  background-size: 100% 100%;
+  position: relative;
+}
+
+button{
+  border-style: ridge;
+}
+input[type="checkbox"]{
+  display: none;
+}
+label.qualities, label.disadvantages{
+  text-align: left;
+  position: relative;
+  font-size: 20px;
+  padding: 10px 0px 10px 18px;
+  margin-left: 20px;
+}
+label.qualities:before, label.qualities:after, label.disadvantages:before, label.disadvantages:after{
+  /*absolutely positioned*/
+  position: absolute; top: 10px; left: -10px;
+}
+label.qualities:before, label.disadvantages:before {
+  content: ''; /*checkbox unchecked */
+  width: 10px;
+  height: 10px;
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+}
+label.qualities:after, label.disadvantages:after {
+  content: ''; /*checkbox checked*/
+  width: 10px;
+  height: 10px;
+  box-shadow: 0px 0px 5px #85DAF3;
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid #85DAF3;
+  border-radius: 50%;
+
+  -webkit-transition: all 0.50s;
+  -moz-transition: all 0.50s;
+  -o-transition: all 0.50s;
+  transition: all 0.50s;
+}
+input[type="checkbox"]:checked + label:after {
+  padding: 0px 0px 0px 0px;
+  margin: 10px 1px 3px 4px;
+  width: 8px;
+  height: 8px;
+  opacity: 1;
+  border:none;
+  background-color: #ff6666;
+  box-shadow: 0 0 5px #ff6666, 0 0 10px #ff6666, 0 0 20px red, 0 0 30px red, 0 0 40px red, 0 0 55px red, 0 0 75px red;
+}
+.qualities_container, .box_background{
+  display:inline-block;
+  border-style: hidden;
+  padding: 10px 25px 25px 25px;
+  margin-top: 100px;
+  opacity: .9;
+  border-radius: 15%;
+  background-color: #050505;
+  color: rgba(81,203,238,.5);
+  box-shadow: 0px 0px 30px #101030;
+  text-shadow: 0 0 1px rgba(81,203,238,.5), 0 0 2px rgba(81,203,238,.5), 0 0 4px rgba(9,0,255,.5), 0 0 6px rgba(9,0,255,.5), 0 0 8px rgba(9,0,255,.5), 0 0 11px rgba(9,0,255,.5), 0 0 15px rgba(9,0,255,.5);
+
+  -webkit-transition: all 0.40s ease-in-out;
+  -moz-transition: all 0.40s ease-in-out;
+  -o-transition: all 0.40s ease-in-out;
+  transition: all 0.40s ease-in-out;
+
+}
+.qualities_container:hover, .box_background:hover{
+  box-shadow: 0px 0px 30px #3030ee;
+  background-color: black;
+  opacity: 1;
+  color: #51cbee;
+  text-shadow: 0 0 1px #51cbee, 0 0 2px #51cbee, 0 0 4px #0900FF, 0 0 6px #0900FF, 0 0 8px #0900FF, 0 0 11px #0900FF, 0 0 15px #0900FF;
+}
+.border{
+  margin-top: 100px;
+  text-align: left;
+  padding: 30px 20px 20px 40px;
+  display: inline-block;
+  border-style: hidden;
+  box-shadow: 0px 0px 30px #bb0000;
+  border-radius: 15% 15% 10% 10%;
+  margin-bottom: 100px;
+}
+#danger_label {
+  padding-right: 8px;
+}
+#disadvantages_container {
+  display: none;
+}
+
+
+label[for="signature"]{
+  float: right;
+  width: 100%;
+  font-size: 12px;
+  border-top: 1px solid #51cbee;
+  box-shadow: 0px 0px 30px #101030;
+
+}
+
+
+
+table.size_key {
+  text-align: center;
+  font-size: 8px;
+  position: relative;
+  left: -15px;
+}
+
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+
+@-webkit-keyframes rotate {
+  from {-webkit-transform:rotate(0deg);}
+  to {  -webkit-transform:rotate(20deg);}
+}
+
+.border-effect{
+  position: relative;
+  bottom: -130px;
+}

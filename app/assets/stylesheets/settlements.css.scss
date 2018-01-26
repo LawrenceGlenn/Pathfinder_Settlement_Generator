@@ -13,7 +13,6 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
  *= require_self
  *= require jquery-ui/tooltip
  */
@@ -25,6 +24,7 @@
   font-weight: normal;
   font-style: normal;
 }
+
 
 body{
   font-family: 'Carobtn', Helvetica, sans-serif;
@@ -89,7 +89,7 @@ label.qualities, label.disadvantages{
   font-size: 24px;
   cursor: pointer;
   color: black;
-  padding: 10px 0px 10px 28px;
+  padding: 10px 0px 10px 18px;
   margin-left: 20px;
 }
 label.qualities:before, label.qualities:after, label.disadvantages:before, label.disadvantages:after{
@@ -207,6 +207,11 @@ table.size_key {
   display: none;
   float: left;
 }
+.demo_container{
+  display: block;
+  float: none;
+  height: 34px;
+}
 #population_details_input{
   resize: none;
   font-size: 16px;
@@ -291,5 +296,14 @@ button{
   background-size: 100% 100%;
 }
 .disadvantages_checkbox_container{
+  display: inline-block;
+}
+
+.nav_bar{
+  text-align: right;
+  font-size: 20px; 
+}
+
+.disadvantages_container{
   display: inline-block;
 }
