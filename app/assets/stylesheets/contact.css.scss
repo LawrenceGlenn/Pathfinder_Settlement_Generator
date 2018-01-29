@@ -1,0 +1,142 @@
+
+
+body{
+  font-size: 20px;
+  overflow:hidden;
+  -webkit-backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  -webkit-transform: translate3d(0,0,0);
+  background: radial-gradient(#eee, #bbb);
+}
+.contact_container{
+  text-align: center;
+  margin-top: 10%;
+  margin-bottom: 5%;
+  overflow:hidden;
+  white-space:nowrap;
+  text-shadow: 2px 2px #aaaaaa;
+}
+.name_subtitle{
+  font-size: 12px;
+  width:100%;
+}
+.name{
+  font-size:40px;
+  animation: showup 5s;
+}
+.name_subtitle span{
+
+  margin-left:-150%;
+  animation: slidein 9s;
+  animation-fill-mode: forwards;
+}
+    
+    
+  
+
+$lines: 28; // no of <li> elements, has to be an even number. Still learning how sass works, I'm getting a warning when an odd number is used.
+
+$delayandduration: 3; // use this number to divide both animation duration for <ul> and animation delay for <li>. Controls the speed of the animation. Greater = faster.
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    }
+ul {
+    overflow: hidden;
+    perspective: 500px;
+    list-style: none;
+    height: 50vh;
+    max-height: 800px;
+    min-height: 300px;
+    text-align: center;
+    text-shadow: 3px 3px #aaaaaa;
+
+    // animation: 60s width-sway linear infinite;
+    }
+@keyframes width-sway {
+    0%, 100% {
+        width: 100%;
+        // transform: rotate(10deg);
+        }
+    50% {
+        width: 100%;
+        // transform: rotate(-10deg);
+        }
+    }
+li {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    padding-left:5%;
+    
+    transform: translateY(50vh);
+    
+    font-size: 1rem;
+    font-family: sans-serif;
+    font-weight: bold;
+
+    animation: #{$lines/$delayandduration}s spiral-staircase linear infinite;
+    }
+
+@for $i from 1 through $lines {
+    li:nth-child(#{$i}) {
+        animation-delay: #{$i/$delayandduration}s;
+        }
+    }
+
+@for $r from 1 through $lines/2 {
+    li:nth-child(#{$r}) {
+        right: #{$r}rem;
+        }
+    li:nth-last-child(#{$r}) {
+        right: #{$r}rem;
+        }
+    }
+
+@keyframes spiral-staircase {
+    0% {
+        transform: rotateY(90deg) translateY(40vh);
+        }
+    0%, 95% {
+         opacity: 0;
+        }
+    25% {
+        transform: rotateY(0deg) translateY(35vh);
+         opacity: 1;
+        }
+    50% {
+        transform: rotateY(0deg) translateY(25vh);
+         opacity: 1;
+        }
+    75% {
+        transform: rotateY(0deg) translateY(15vh);
+         opacity: 1;
+        }
+    100% {
+        transform: rotateY(-90deg) translateY(5vh);
+        opacity: 0;
+        }
+    }
+
+    @keyframes showup {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
+@keyframes slidein {
+    0% { margin-left:-150%; }
+    20% { margin-left:-150%; }
+    35% { margin-left:0px; }
+    100% { margin-left:0px; }
+}
+
+
+
+.nav_bar{
+  text-align: right;
+}
+ a{
+  padding: 0 10px 0 10px;
+ }

@@ -1,0 +1,351 @@
+/* line 4, /home/lawrence/My Programs/Settlement_Generator/app/assets/stylesheets/tech_settlements.css.scss */
+body {
+  text-align: center;
+  font-family: 'Futura';
+  color: #51cbee;
+  font-size: 20px;
+  text-shadow: 0 0 1px #51cbee, 0 0 2px #51cbee, 0 0 4px #0900FF, 0 0 6px #0900FF, 0 0 8px #0900FF, 0 0 11px #0900FF, 0 0 15px #0900FF;
+}
+
+/* line 11, /home/lawrence/My Programs/Settlement_Generator/app/assets/stylesheets/tech_settlements.css.scss */
+input, textarea, select {
+  font-family: 'Futura';
+  color: #51cbee;
+  text-shadow: 0 0 1px #51cbee, 0 0 2px #51cbee, 0 0 4px #0900FF, 0 0 6px #0900FF, 0 0 8px #0900FF, 0 0 11px #0900FF, 0 0 15px #0900FF;
+}
+
+/* line 16, /home/lawrence/My Programs/Settlement_Generator/app/assets/stylesheets/tech_settlements.css.scss */
+.background_class {
+  background: #050505;
+}
+
+/* line 20, /home/lawrence/My Programs/Settlement_Generator/app/assets/stylesheets/tech_settlements.css.scss */
+.margin_container {
+  margin-left: 8%;
+  margin-right: 8%;
+}
+
+/* line 25, /home/lawrence/My Programs/Settlement_Generator/app/assets/stylesheets/tech_settlements.css.scss */
+.name_pop_container {
+  font-weight: bold;
+}
+
+/* line 29, /home/lawrence/My Programs/Settlement_Generator/app/assets/stylesheets/tech_settlements.css.scss */
+#population_details_input {
+  resize: none;
+  font-size: 16px;
+  height: 20px;
+  width: 300px;
+}
+
+/* line 36, /home/lawrence/My Programs/Settlement_Generator/app/assets/stylesheets/tech_settlements.css.scss */
+table {
+  display: inline-block;
+}
+
+/* line 39, /home/lawrence/My Programs/Settlement_Generator/app/assets/stylesheets/tech_settlements.css.scss */
+h2 {
+  font-size: 14px;
+  margin-top: -26px;
+}
+
+/* line 43, /home/lawrence/My Programs/Settlement_Generator/app/assets/stylesheets/tech_settlements.css.scss */
+h1, h2, .qualities_label, .disadvantages_label {
+  font-family: 'Futura';
+  color: #85DAF3;
+  font-weight: bold;
+  text-shadow: 0 0 5px #85DAF3, 0 0 10px #85DAF3, 0 0 20px #0900FF, 0 0 30px #0900FF, 0 0 40px #0900FF, 0 0 55px #0900FF, 0 0 75px #0900FF;
+}
+
+/* line 49, /home/lawrence/My Programs/Settlement_Generator/app/assets/stylesheets/tech_settlements.css.scss */
+.qualities_label, .disadvantages_label {
+  font-size: 24px;
+}
+
+/* line 52, /home/lawrence/My Programs/Settlement_Generator/app/assets/stylesheets/tech_settlements.css.scss */
+.ui-helper-hidden-accessible {
+  display: none;
+}
+
+/* line 56, /home/lawrence/My Programs/Settlement_Generator/app/assets/stylesheets/tech_settlements.css.scss */
+input, textarea, select, button {
+  transition: all 0.30s ease-in-out;
+  outline: none;
+  padding: 3px 3px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid #499eff;
+  border-radius: 6px;
+  background: transparent;
+}
+
+/* line 66, /home/lawrence/My Programs/Settlement_Generator/app/assets/stylesheets/tech_settlements.css.scss */
+.divtext {
+  transition: all 0.30s ease-in-out;
+  outline: none;
+  padding: 3px 3px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  background: transparent;
+  border: none;
+  text-align: left;
+  width: 95%;
+  min-height: 30px;
+  overflow: auto;
+}
+
+/* line 79, /home/lawrence/My Programs/Settlement_Generator/app/assets/stylesheets/tech_settlements.css.scss */
+input:hover, textarea:hover, select:hover, button:hover, .divtext:hover {
+  box-shadow: 0px 0px 20px #0900FF;
+  padding: 3px 3px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid #0900FF;
+}
+
+/* line 86, /home/lawrence/My Programs/Settlement_Generator/app/assets/stylesheets/tech_settlements.css.scss */
+input:focus, textarea:focus, select:focus, button:focus, .divtext:focus {
+  box-shadow: 0px 0px 20px #85DAF3;
+  padding: 3px 3px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid #85DAF3;
+}
+
+/* line 93, /home/lawrence/My Programs/Settlement_Generator/app/assets/stylesheets/tech_settlements.css.scss */
+table {
+  text-align: left;
+}
+
+/* line 96, /home/lawrence/My Programs/Settlement_Generator/app/assets/stylesheets/tech_settlements.css.scss */
+.remove_background {
+  display: none;
+}
+
+/* line 100, /home/lawrence/My Programs/Settlement_Generator/app/assets/stylesheets/tech_settlements.css.scss */
+.checkbox_container {
+  float: left;
+}
+
+/* line 103, /home/lawrence/My Programs/Settlement_Generator/app/assets/stylesheets/tech_settlements.css.scss */
+.ui-tooltip-content {
+  vertical-align: middle;
+  font-family: sans-serif;
+  font-weight: normal;
+  font-size: 12px;
+  border: 1px solid #499eff;
+  border-radius: 50%;
+  padding: 30px;
+  box-shadow: 0px 0px 20px #0900FF;
+  background-color: #101010;
+  -webkit-animation: fadein 2s;
+  /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 2s;
+  /* Firefox < 16 */
+  -ms-animation: fadein 2s;
+  /* Internet Explorer */
+  -o-animation: fadein 2s;
+  /* Opera < 12.1 */
+  animation: fadein 2s;
+}
+
+/* line 119, /home/lawrence/My Programs/Settlement_Generator/app/assets/stylesheets/tech_settlements.css.scss */
+div[role="tooltip"] {
+  vertical-align: middle;
+  max-width: 200px;
+  border: 2px solid #49eeff;
+  box-shadow: 0px 0px 20px #49eeff;
+  border-radius: 50%;
+  padding: 30px;
+  background-image: url(Test_Neon.png);
+  background-size: 100% 100%;
+  position: relative;
+}
+
+/* line 131, /home/lawrence/My Programs/Settlement_Generator/app/assets/stylesheets/tech_settlements.css.scss */
+button {
+  border-style: ridge;
+  color: #51cbee;
+}
+
+/* line 135, /home/lawrence/My Programs/Settlement_Generator/app/assets/stylesheets/tech_settlements.css.scss */
+input[type="checkbox"] {
+  display: none;
+}
+
+/* line 138, /home/lawrence/My Programs/Settlement_Generator/app/assets/stylesheets/tech_settlements.css.scss */
+label.qualities, label.disadvantages {
+  text-align: left;
+  position: relative;
+  font-size: 20px;
+  padding: 10px 0px 10px 18px;
+  margin-left: 20px;
+}
+
+/* line 145, /home/lawrence/My Programs/Settlement_Generator/app/assets/stylesheets/tech_settlements.css.scss */
+label.qualities:before, label.qualities:after, label.disadvantages:before, label.disadvantages:after {
+  /*absolutely positioned*/
+  position: absolute;
+  top: 10px;
+  left: -10px;
+}
+
+/* line 149, /home/lawrence/My Programs/Settlement_Generator/app/assets/stylesheets/tech_settlements.css.scss */
+label.qualities:before, label.disadvantages:before {
+  content: '';
+  /*checkbox unchecked */
+  width: 10px;
+  height: 10px;
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+}
+
+/* line 156, /home/lawrence/My Programs/Settlement_Generator/app/assets/stylesheets/tech_settlements.css.scss */
+label.qualities:after, label.disadvantages:after {
+  content: '';
+  /*checkbox checked*/
+  width: 10px;
+  height: 10px;
+  box-shadow: 0px 0px 5px #85DAF3;
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid #85DAF3;
+  border-radius: 50%;
+  -webkit-transition: all 0.50s;
+  -moz-transition: all 0.50s;
+  -o-transition: all 0.50s;
+  transition: all 0.50s;
+}
+
+/* line 171, /home/lawrence/My Programs/Settlement_Generator/app/assets/stylesheets/tech_settlements.css.scss */
+input[type="checkbox"]:checked + label:after {
+  padding: 0px 0px 0px 0px;
+  margin: 10px 1px 3px 4px;
+  width: 8px;
+  height: 8px;
+  opacity: 1;
+  border: none;
+  background-color: #ff6666;
+  box-shadow: 0 0 5px #ff6666, 0 0 10px #ff6666, 0 0 20px red, 0 0 30px red, 0 0 40px red, 0 0 55px red, 0 0 75px red;
+}
+
+/* line 181, /home/lawrence/My Programs/Settlement_Generator/app/assets/stylesheets/tech_settlements.css.scss */
+.qualities_container, .box_background {
+  display: inline-block;
+  border-style: hidden;
+  padding: 10px 25px 25px 25px;
+  margin-top: 100px;
+  opacity: .9;
+  border-radius: 15%;
+  background-color: #050505;
+  color: rgba(81, 203, 238, 0.5);
+  box-shadow: 0px 0px 30px #101030;
+  text-shadow: 0 0 1px rgba(81, 203, 238, 0.5), 0 0 2px rgba(81, 203, 238, 0.5), 0 0 4px rgba(9, 0, 255, 0.5), 0 0 6px rgba(9, 0, 255, 0.5), 0 0 8px rgba(9, 0, 255, 0.5), 0 0 11px rgba(9, 0, 255, 0.5), 0 0 15px rgba(9, 0, 255, 0.5);
+  -webkit-transition: all 0.40s ease-in-out;
+  -moz-transition: all 0.40s ease-in-out;
+  -o-transition: all 0.40s ease-in-out;
+  transition: all 0.40s ease-in-out;
+}
+
+/* line 199, /home/lawrence/My Programs/Settlement_Generator/app/assets/stylesheets/tech_settlements.css.scss */
+.qualities_container:hover, .box_background:hover {
+  box-shadow: 0px 0px 30px #3030ee;
+  background-color: black;
+  opacity: 1;
+  color: #51cbee;
+  text-shadow: 0 0 1px #51cbee, 0 0 2px #51cbee, 0 0 4px #0900FF, 0 0 6px #0900FF, 0 0 8px #0900FF, 0 0 11px #0900FF, 0 0 15px #0900FF;
+}
+
+/* line 206, /home/lawrence/My Programs/Settlement_Generator/app/assets/stylesheets/tech_settlements.css.scss */
+.border {
+  margin-top: 100px;
+  text-align: left;
+  padding: 30px 20px 20px 40px;
+  display: inline-block;
+  border-style: hidden;
+  box-shadow: 0px 0px 30px #bb0000;
+  border-radius: 15% 15% 10% 10%;
+  margin-bottom: 100px;
+}
+
+/* line 216, /home/lawrence/My Programs/Settlement_Generator/app/assets/stylesheets/tech_settlements.css.scss */
+#danger_label {
+  padding-right: 8px;
+}
+
+/* line 219, /home/lawrence/My Programs/Settlement_Generator/app/assets/stylesheets/tech_settlements.css.scss */
+#disadvantages_container {
+  display: none;
+}
+
+/* line 224, /home/lawrence/My Programs/Settlement_Generator/app/assets/stylesheets/tech_settlements.css.scss */
+label[for="signature"] {
+  float: right;
+  width: 100%;
+  font-size: 12px;
+  border-top: 1px solid #51cbee;
+  box-shadow: 0px 0px 30px #101030;
+}
+
+/* line 235, /home/lawrence/My Programs/Settlement_Generator/app/assets/stylesheets/tech_settlements.css.scss */
+table.size_key {
+  text-align: center;
+  font-size: 8px;
+  position: relative;
+  left: -15px;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* Internet Explorer */
+@-ms-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(20deg);
+  }
+}
+/* line 272, /home/lawrence/My Programs/Settlement_Generator/app/assets/stylesheets/tech_settlements.css.scss */
+.border-effect {
+  position: relative;
+  bottom: -130px;
+}
+
+/* line 277, /home/lawrence/My Programs/Settlement_Generator/app/assets/stylesheets/tech_settlements.css.scss */
+.nav_bar {
+  text-align: right;
+}
+
+/* line 280, /home/lawrence/My Programs/Settlement_Generator/app/assets/stylesheets/tech_settlements.css.scss */
+a {
+  padding: 0 10px 0 10px;
+}

@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   get '/home' => 'settlements#home'
+  get '/Contact' => 'settlements#contact'
   get '/MedievalStyle' => 'settlements#home'
   get '/TechStyle' => 'tech_settlements#home'
   #post '/home' => 'settlements#home'

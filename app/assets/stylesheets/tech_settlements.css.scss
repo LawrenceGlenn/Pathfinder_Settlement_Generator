@@ -56,7 +56,7 @@ text-shadow: 0 0 5px #85DAF3, 0 0 10px #85DAF3, 0 0 20px #0900FF, 0 0 30px #0900
 input, textarea, select, button{
   transition: all 0.30s ease-in-out;
   outline: none;
-  padding: 3px 0px 3px 3px;
+  padding: 3px 3px 3px 3px;
   margin: 5px 1px 3px 0px;
   border: 1px solid #499eff;
   border-radius: 6px;
@@ -66,7 +66,7 @@ input, textarea, select, button{
 .divtext{
   transition: all 0.30s ease-in-out;
   outline: none;
-  padding: 3px 0px 3px 3px;
+  padding: 3px 3px 3px 3px;
   margin: 5px 1px 3px 0px;
   background: transparent;
   border: none;
@@ -78,14 +78,14 @@ input, textarea, select, button{
  
 input:hover, textarea:hover, select:hover, button:hover, .divtext:hover {
   box-shadow: 0px 0px 20px #0900FF;
-  padding: 3px 0px 3px 3px;
+  padding: 3px 3px 3px 3px;
   margin: 5px 1px 3px 0px;
   border: 1px solid #0900FF;
 }
  
 input:focus, textarea:focus, select:focus, button:focus, .divtext:focus {
   box-shadow: 0px 0px 20px #85DAF3;
-  padding: 3px 0px 3px 3px;
+  padding: 3px 3px 3px 3px;
   margin: 5px 1px 3px 0px;
   border: 1px solid #85DAF3;
 }
@@ -130,6 +130,7 @@ div[role="tooltip"]{
 
 button{
   border-style: ridge;
+   color: #51cbee;
 }
 input[type="checkbox"]{
   display: none;
@@ -272,3 +273,10 @@ table.size_key {
   position: relative;
   bottom: -130px;
 }
+
+.nav_bar{
+  text-align: right;
+}
+ a{
+  padding: 0 10px 0 10px;
+ }
